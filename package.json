@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/andysumi/gast-ci-sample#readme",
   "devDependencies": {
+    "@google/clasp": "^2.3.0",
     "eslint": "^6.8.0",
     "eslint-plugin-googleappsscript": "^1.0.3"
   }

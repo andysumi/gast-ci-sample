@@ -3,5 +3,12 @@
   "dependencies": {
   },
   "exceptionLogging": "STACKDRIVER",
+  "executionApi": {
+    "access": "MYSELF"
+  },
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/script.external_request",
+    "https://www.googleapis.com/auth/spreadsheets"
+  ],
   "runtimeVersion": "DEPRECATED_ES5"
 }
