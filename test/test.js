@@ -2,10 +2,15 @@
 
 function gastTestRunner() { // eslint-disable-line no-unused-vars
   if ((typeof GasTap) === 'undefined') { // GasT Initialization. (only if not initialized yet.)
-    eval(UrlFetchApp.fetch('https://raw.githubusercontent.com/zixia/gast/master/src/gas-tap-lib.js').getContentText())
+    eval(UrlFetchApp.fetch('https://raw.githubusercontent.com/zixia/gast/master/src/gas-tap-lib.js').getContentText());
   } // Class GasTap is ready for use now!
 
-  var test = new GasTap();
+  var log = '';
+  var loggerFunc = function (msg) { log += msg + '\n';};
+
+  var test = new GasTap({
+    logger: loggerFunc
+  });
 
   var url = 'https://docs.google.com/spreadsheets/d/1wqmI2TsJDuSIRt3Kg4A1nfO9HRZVQDsXbg2uIxPlGfU/edit#gid=0';
   var ss = SpreadsheetApp.openByUrl(url);
@@ -14,6 +19,8 @@ function gastTestRunner() { // eslint-disable-line no-unused-vars
   testSayHello(test);
 
   test.finish();
+
+  return { failures: test.totalFailed(), log: log };
 }
 
 function testSayHello(test) { // eslint-disable-line no-unused-vars
