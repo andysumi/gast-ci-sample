@@ -1,0 +1,27 @@
+{
+  "name": "gast-ci-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "eslint src --config .eslintrc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andysumi/gast-ci-sample.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andysumi/gast-ci-sample/issues"
+  },
+  "homepage": "https://github.com/andysumi/gast-ci-sample#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-googleappsscript": "^1.0.3"
+  }
+}
