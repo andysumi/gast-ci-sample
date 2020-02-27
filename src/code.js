@@ -27,6 +27,6 @@ function setSheetData(sheet, rows) { // eslint-disable-line no-unused-vars
 
 function sayHello() { // eslint-disable-line no-unused-vars
   var sheet = getActiveSheet();
-  var rows = [['Hello']];
+  var rows = [['Yellow']];
   setSheetData(sheet, rows);
 }
